@@ -6,10 +6,12 @@ const ProductSchema = new mongoose.Schema({
         required:[true, " Please provide product name"],
         maxlength: 50
     },
-    category:{
-        type:String,
-        required:[true, " Please provide product type"],
-        maxlength: 20
+    category: {
+        type: [{
+            type: String,
+            enum: ["flowers", "fruits"]
+        }],
+        default: ["flowers"]
     },
     price:{
         type:Number,

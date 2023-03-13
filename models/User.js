@@ -24,6 +24,13 @@ const UserSchema = new mongoose.Schema({
         required:[true, "Please provide password"],
         minlength:6,
     },
+    role: {
+        type: [{
+            type: String,
+            enum: ["client", "admin", "super admin", "vendor"]
+        }],
+        default: ['client']
+    },
 });
 // Using the function keyword make the scope scoped to our document
 UserSchema.pre('save', async function(next) {
