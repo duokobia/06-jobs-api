@@ -24,14 +24,16 @@ const UserSchema = new mongoose.Schema({
         required:[true, "Please provide password"],
         minlength:6,
     },
-    role: {
-        type: [{
-            type: String,
-            enum: ["client", "admin", "super admin", "vendor"]
-        }],
-        default: ['client']
+    isAdmin:{
+        type:Boolean,
+        required:true,
+        default:false
     },
-});
+},
+{ 
+    timestamps:true
+}
+);
 // Using the function keyword make the scope scoped to our document
 UserSchema.pre('save', async function(next) {
     const salt = await bcrypt.genSalt(10);

@@ -13,10 +13,16 @@ const app = express();
 // connectDB
 const connectDB = require("./db/connect");
 const authenticateUser = require("./middleware/authentication");
+const authorizeUser = require("./middleware/authorization");
+
 
 // routers
 const authRouter = require("./routes/auth");
 const productsRouter = require("./routes/products");
+const adminRouter = require("./routes/admin");
+const cartRouter = require("./routes/cart");
+const orderRouter = require("./routes/order");
+
 
 
 // error handler
@@ -34,19 +40,23 @@ app.use(express.json());
 app.use(helmet());
 app.use(cors());
 app.use(xss());
-
+app.use(express.static("public"));
 
 
 // routes
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/products", authenticateUser, productsRouter);
+app.use("/api/v1/admin", adminRouter);
+app.use("/api/v1/cart",  cartRouter);
+app.use("/api/v1/order", orderRouter);
+
 
 
 // extra packages
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 5000;
 
 const start = async () => {
   try {

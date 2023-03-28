@@ -6,6 +6,10 @@ const ProductSchema = new mongoose.Schema({
         required:[true, " Please provide product name"],
         maxlength: 50
     },
+    image:{
+        type:String,
+        required:[false, " Please upload a product image"], 
+    },
     category: {
         type: [{
             type: String,
@@ -20,13 +24,12 @@ const ProductSchema = new mongoose.Schema({
     },
     description:{
         type:String,
-        required:[true, " Please provide product description"],
-        maxlength: 100
+        required:[true, " Please provide product description"]
     },
-    quantity:{
+    countInStock:{
         type:Number,
         required:[true, " Please provide product quantity"],
-        maxlength: 20
+        default: 0
     },
     status:{
         type:String,
@@ -38,6 +41,10 @@ const ProductSchema = new mongoose.Schema({
         ref: "User",
         required: [true, "Please provide user"]
     }
-}, { timestamps: true });
+}, 
+{ 
+    timestamps: true
+}
+);
 
 module.exports = mongoose.model("Product", ProductSchema);

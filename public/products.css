@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+}
+
+body{
+    background: #D3F588 !important;
+    /* background-image: url("https://i.pinimg.com/originals/42/c2/85/42c285a28d03945c318f14c9e9d4ca4d.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
+    min-height: 100vh;
+    font-weight: 400;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,label,span {
+    font-weight: 500;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+/* TO-DO MAKE ALL UNITS REM */
+/* Change font to see how beautiful App looks */
+/* Add scrolling parallax effect background images to the landing page */
+/* Resize the login form to go to the RHS of the page. */
+/* Media querries of the app. */
+/* Deploy app to render.com */
+/* User Interface to create products. */
+
+
+ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+    padding: 0 5px 5px;
+    cursor: pointer;
+}
+
+button{
+    margin: 2px 5px;
+    padding: 8px 18px;
+    border: 0;
+    border-radius: 1.45rem;
+    font-size: 16px;
+    font-weight: 400;
+    background: #015500;
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+    background: #015500;
+    opacity: 0.95;
+    color: rgb(243, 238, 238);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 15px 5px;
+    background-color: rgb(43, 41, 41);
+    color: white;
+    height: 50px;
+}
+
+.upper-navbar-info{
+    padding-right: 35px;
+}
+
+.logoff-button{
+    margin-right: 25px;
+}
+
+.lower-navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    background-color: #F6FDE7;
+    color: #034100;
+    height: 70px;
+}
+
+.main-logo{
+    padding: 0 0 0 25px;
+}
+
+.main-logo-fruits{
+  padding: 0;
+}
+
+.main-logo-and{
+    color: #85aa37;
+    margin: -8px;
+}
+
+.main-logo-flowers{
+    color: #FF58A6;
+}
+
+.lower-navbar-list{
+    padding-right: 40px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.lower-navbar-list-item{
+    padding: 0 15px 0;
+}
+
+.lower-navbar-list-item:hover{
+    border-bottom: 3px solid #FF58A6;
+    padding-bottom: 5px;
+}
+
+main{
+    width: 450px;
+    margin: 20% auto;
+    border: 1px solid #191D0E;
+    border-radius: 15px;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    padding: 40px 55px 45px 55px;
+    transition: all .3s;
+}
+
+.form-message{
+    padding: 20px 0;
+    color: red;
+}
+
+#logon-register{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.form-input-div{
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.form-input-first-line{
+    margin-top: 20px;
+}
+
+.form-input-control{
+    font-weight: 400;
+}
+
+.form-input-control:focus{
+    border-color: #e92222;
+    box-shadow: none;
+}
+
+footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px 5px;
+    background: #191D0E;
+    color: white;
+    height: 100px;
+}
