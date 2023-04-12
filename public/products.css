@@ -9,15 +9,13 @@
 body, html{
     width: 100%;
     height: 100%;
+    overflow-x: hidden;
 }
 
 body{
-    background: #D3F588 !important;
-    /* background-image: url("https://i.pinimg.com/originals/42/c2/85/42c285a28d03945c318f14c9e9d4ca4d.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; */
+    background: #D3F588 center/cover url("https://www.shutterstock.com/image-photo/apple-tree-green-260nw-20227228.jpg") no-repeat;
     min-height: 100vh;
+    width: 100%;
     font-weight: 400;
     font-family: 'Fira Sans', sans-serif;
 }
@@ -35,6 +33,10 @@ h1,h2,h3,h4,h5,h6,label,span {
 /* Deploy app to render.com */
 /* User Interface to create products. */
 
+/* Edit form input and align them properly */
+/* Delete App.css once I copy css selector parameters */
+/* Change units to rem */
+
 
 ul{
     display: flex;
@@ -46,16 +48,16 @@ ul{
 li{
     text-decoration: none;
     list-style: none;
-    padding: 0 5px 5px;
+    padding: 0 0.3125rem 0.3125rem;
     cursor: pointer;
 }
 
 button{
-    margin: 2px 5px;
-    padding: 8px 18px;
+    margin: 0.125rem 0.3125rem;
+    padding: 0.5rem 1.125rem;
     border: 0;
     border-radius: 1.45rem;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     background: #015500;
     color: white;
@@ -68,6 +70,8 @@ button:hover{
     color: rgb(243, 238, 238);
 }
 
+/* header section */
+
 header{
     display: flex;
     flex-direction: column;
@@ -78,18 +82,18 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    padding: 0 15px 5px;
+    padding: 0 0.9375rem 0.3125rem;
     background-color: rgb(43, 41, 41);
     color: white;
-    height: 50px;
+    height: 3.125rem;
 }
 
 .upper-navbar-info{
-    padding-right: 35px;
+    padding-right: 2.1875rem;
 }
 
 .logoff-button{
-    margin-right: 25px;
+    margin-right: 1.5625rem;
 }
 
 .lower-navbar{
@@ -97,90 +101,185 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 15px;
+    padding: 0 0 0 0.9375rem;
     background-color: #F6FDE7;
     color: #034100;
-    height: 70px;
+    height: 4.375rem;
 }
 
 .main-logo{
-    padding: 0 0 0 25px;
+    padding: 0 0 0 2.5rem;
 }
 
 .main-logo-fruits{
-  padding: 0;
+    padding: 0;
 }
 
 .main-logo-and{
     color: #85aa37;
-    margin: -8px;
+    margin: -0.5rem;
 }
 
 .main-logo-flowers{
     color: #FF58A6;
+    font-weight: normal;
+}
+
+.lower-navbar-advert{
+    border: 1px solid #015500;
+    border-radius: 0.3125rem;
+    padding: 0.3125rem 0.5rem;
+    color: #e9692c;
 }
 
 .lower-navbar-list{
-    padding-right: 40px;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
 }
 
 .lower-navbar-list-item{
-    padding: 0 15px 0;
+    padding: 0 0.9375rem 0;
+    cursor: pointer;
+}
+
+.lower-navbar-list-item-cart{
+    padding: 0 0.9375rem 0;
+    cursor: pointer;
+    margin-left: 15px;
+    position: relative;
 }
 
 .lower-navbar-list-item:hover{
-    border-bottom: 3px solid #FF58A6;
-    padding-bottom: 5px;
+    border-bottom: 0.15625rem solid #FF58A6;
+    padding-bottom: 0.1875rem;
 }
+
+.lower-navbar-list-item-cart:hover{
+    border-bottom: 0.15625rem solid #015500;
+    padding-bottom: 0.1875rem;
+}
+
+.shopping-cart-count{
+    position: absolute;
+    background-color: #e92222;
+    color: white;
+    font-size: 11px;
+    border: 0.625px solid ;
+    border-radius: 50%;
+    padding: 4.5px;
+}
+
+/* main section */
 
 main{
-    width: 450px;
-    margin: 20% auto;
-    border: 1px solid #191D0E;
-    border-radius: 15px;
-    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-    padding: 40px 55px 45px 55px;
-    transition: all .3s;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
 }
 
-.form-message{
-    padding: 20px 0;
-    color: red;
+.hero-container {
+    flex: 3;
+    background: #D3F588 center/cover url("./images/flowerFruitBg.jpeg") no-repeat;
+    opacity: 0.754;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: transparent;
+    font-size: 40px;
+}
+
+.hero-caption{
+    color: white;
+    font-style: 40px; 
+}
+
+.form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.form-container-heading{
+    color: brown;
+    font-size: 30px;
+}
+
+.auth-inner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    min-height: 15.25rem;
+    transition: all .3s;
 }
 
 #logon-register{
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
-    padding: 25px 0;
+.form-message{
+    padding: 1.25rem 0;
+    color: red;
 }
 
 .form-input-div{
-    margin-bottom: 15px;
-    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.9375rem;
+    font-size: 1.125rem;
+    color: #041403;
+}
+
+.form-input-div label{
+    font-weight: normal;
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+.form-button-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-input-first-line{
-    margin-top: 20px;
+    margin-top: 1.25rem;
 }
 
-.form-input-control{
+.form-input-control {
+    width: 100%;
     font-weight: 400;
+    font-size: 14px;
+    padding: 8px 8px;
+    border: .01px solid gray;
+    border-radius: 8px;
 }
 
-.form-input-control:focus{
-    border-color: #e92222;
-    box-shadow: none;
-}
+
+/* footer section */
 
 footer{
     position: fixed;
@@ -191,8 +290,38 @@ footer{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 15px 5px;
+    padding: 0 2.8125rem 0 2.8125rem;
     background: #191D0E;
     color: white;
-    height: 100px;
+    height: 6.25rem;
+}
+
+/* Queries */
+@media only screen and (max-width: 768px) {
+   
+    .hero-container {
+        flex: 2;
+    }
+
+    .form-container {
+        flex: 2;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+   
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+    .hero-container {
+        min-height: 30vh;
+    }
+
+    .form-container {
+        margin: 30% auto;
+    }
 }
