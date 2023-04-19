@@ -1,78 +1,79 @@
 async function buildProductsTable(productsTable, productsTableHeader, token, message) {
-    try {
-      const response = await fetch("/api/v1/products", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-      });
-      const data = await response.json();
-      var children = [productsTableHeader];
-      if (response.status === 200) {
-        if (data.count === 0) {
-          productsTable.replaceChildren(...children); // clear this for safety
-          return 0;
-        } else {
-          for (let i = 0; i < data.products.length; i++) {
-            let editButton = `<td><button type="button" class="editButton" data-id=${data.products[i]._id}>edit</button></td>`;
-            let deleteButton = `<td><button type="button" class="deleteButton" data-id=${data.products[i]._id}>delete</button></td>`;
-            let rowHTML = `<td>${data.products[i].company}</td><td>${data.products[i].position}</td><td>${data.products[i].status}</td>${editButton}${deleteButton}`;
-            let rowEntry = document.createElement("tr");
-            rowEntry.innerHTML = rowHTML;
-            children.push(rowEntry);
-          }
-          productsTable.replaceChildren(...children);
-        }
-        return data.count;
-      } else {
-        message.textContent = data.msg;
+  try {
+    const response = await fetch("/api/v1/products", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    const data = await response.json();
+    var children = [productsTableHeader];
+    if (response.status === 200) {
+      if (data.count === 0) {
+        productsTable.replaceChildren(...children); // clear this for safety
         return 0;
+      } else {
+        for (let i = 0; i < data.products.length; i++) {
+          let editButton = `<td><button type="button" class="editButton" data-id=${data.products[i]._id}>edit</button></td>`;
+          let deleteButton = `<td><button type="button" class="deleteButton" data-id=${data.products[i]._id}>delete</button></td>`;
+          let rowHTML = `<td>${data.products[i].company}</td><td>${data.products[i].position}</td><td>${data.products[i].status}</td>${editButton}${deleteButton}`;
+          let rowEntry = document.createElement("tr");
+          rowEntry.innerHTML = rowHTML;
+          children.push(rowEntry);
+        }
+        productsTable.replaceChildren(...children);
       }
-    } catch (err) {
-      message.textContent = "A communication error occurred.";
+      return data.count;
+    } else {
+      message.textContent = data.msg;
       return 0;
     }
+  } catch (err) {
+    message.textContent = "A communication error occurred.";
+    return 0;
   }
+}
 
 document.addEventListener("DOMContentLoaded", () => {
-    const logoff = document.getElementById("logoff");
-    const message = document.getElementById("message");
-    const logonRegister = document.getElementById("logon-register");
-    const logon = document.getElementById("logon");
-    const register = document.getElementById("register");
-    const logonDiv = document.getElementById("logon-div");
-    const email = document.getElementById("email");
-    const password = document.getElementById("password");
-    const logonButton = document.getElementById("logon-button");
-    const logonCancel = document.getElementById("logon-cancel");
-    const registerDiv = document.getElementById("register-div");
-    const name = document.getElementById("name");
-    const email1 = document.getElementById("email1");
-    const password1 = document.getElementById("password1");
-    const password2 = document.getElementById("password2");
-    const registerButton = document.getElementById("register-button");
-    const registerCancel = document.getElementById("register-cancel");
-    const products = document.getElementById("products");
-    const productsTable = document.getElementById("products-table");
-    const productsTableHeader = document.getElementById("products-table-header");
-    const addProduct = document.getElementById("add-product");
-    const editProduct = document.getElementById("edit-product");
-    const company = document.getElementById("company");
-    const position = document.getElementById("position");
-    const status = document.getElementById("status");
-    const addingProduct = document.getElementById("adding-product");
-    const productsMessage = document.getElementById("products-message");
-    const editCancel = document.getElementById("edit-cancel");
-  
-    // section 2 
+  const logoff = document.getElementById("logoff");
+  const message = document.getElementById("message");
+  const logonRegister = document.getElementById("logon-register");
+  const logon = document.getElementById("logon");
+  const register = document.getElementById("register");
+  const logonDiv = document.getElementById("logon-div");
+  const email = document.getElementById("email");
+  const password = document.getElementById("password");
+  const logonButton = document.getElementById("logon-button");
+  const logonCancel = document.getElementById("logon-cancel");
+  const registerDiv = document.getElementById("register-div");
+  const name = document.getElementById("name");
+  const email1 = document.getElementById("email1");
+  const password1 = document.getElementById("password1");
+  const password2 = document.getElementById("password2");
+  const registerButton = document.getElementById("register-button");
+  const registerCancel = document.getElementById("register-cancel");
+  const products = document.getElementById("products");
+  const productsTable = document.getElementById("products-table");
+  const productsTableHeader = document.getElementById("products-table-header");
+  const addProduct = document.getElementById("add-product");
+  const editProduct = document.getElementById("edit-product");
+  const company = document.getElementById("company");
+  const position = document.getElementById("position");
+  const status = document.getElementById("status");
+  const addingProduct = document.getElementById("adding-product");
+  const productsMessage = document.getElementById("products-message");
+  const editCancel = document.getElementById("edit-cancel");
 
-    let showing = logonRegister;
+  // section 2 
+
+  let showing = logonRegister;
   let token = null;
   document.addEventListener("startDisplay", async () => {
     showing = logonRegister;
-    token = localStorage.getItem("token");
-    if (token) {
+    // token = localStorage.getItem("token");
+    // if (token) {
+      
       //if the user is logged in
       logoff.style.display = "block";
       const count = await buildProductsTable(
@@ -90,10 +91,10 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       products.style.display = "block";
       showing = products;
-    } else {
+    // } else {
       logonRegister.style.display = "block";
     }
-  });
+  );
 
   var thisEvent = new Event("startDisplay");
   document.dispatchEvent(thisEvent);
@@ -203,126 +204,126 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     } // section 4
     else if (e.target === addProduct) {
-        showing.style.display = "none";
-        editProduct.style.display = "block";
-        showing = editProduct;
-        delete editProduct.dataset.id;
-        company.value = "";
-        position.value = "";
-        status.value = "pending";
-        addingProduct.textContent = "add";
-      } else if (e.target === editCancel) {
-        showing.style.display = "none";
-        company.value = "";
-        position.value = "";
-        status.value = "pending";
-        thisEvent = new Event("startDisplay");
-        document.dispatchEvent(thisEvent);
-      } else if (e.target === addingProduct) {
-  
-        if (!editProduct.dataset.id) {
-          // this is an attempted add
-          suspendInput = true;
-          try {
-            const response = await fetch("/api/v1/products", {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${token}`,
-              },
-              body: JSON.stringify({
-                company: company.value,
-                position: position.value,
-                status: status.value,
-              }),
-            });
-            const data = await response.json();
-            if (response.status === 201) {
-              //successful create
-              message.textContent = "The product entry was created.";
-              showing.style.display = "none";
-              thisEvent = new Event("startDisplay");
-              document.dispatchEvent(thisEvent);
-              company.value = "";
-              position.value = "";
-              status.value = "pending";
-            } else {
-              // failure
-              message.textContent = data.msg;
-            }
-          } catch (err) {
-            message.textContent = "A communication error occurred.";
-          }
-          suspendInput = false;
-        } else {
-          // this is an update
-          suspendInput = true;
-          try {
-            const productID = editProduct.dataset.id;
-            const response = await fetch(`/api/v1/products/${productID}`, {
-              method: "PATCH",
-              headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${token}`,
-              },
-              body: JSON.stringify({
-                company: company.value,
-                position: position.value,
-                status: status.value,
-              }),
-            });
-            const data = await response.json();
-            if (response.status === 200) {
-              message.textContent = "The entry was updated.";
-              showing.style.display = "none";
-              company.value = "";
-              position.value = "";
-              status.value = "pending";
-              thisEvent = new Event("startDisplay");
-              document.dispatchEvent(thisEvent);
-            } else {
-              message.textContent = data.msg;
-            }
-          } catch (err) {
-  
-            message.textContent = "A communication error occurred.";
-          }
-        }
-        suspendInput = false;
-      } // section 5
+      showing.style.display = "none";
+      editProduct.style.display = "block";
+      showing = editProduct;
+      delete editProduct.dataset.id;
+      company.value = "";
+      position.value = "";
+      status.value = "pending";
+      addingProduct.textContent = "add";
+    } else if (e.target === editCancel) {
+      showing.style.display = "none";
+      company.value = "";
+      position.value = "";
+      status.value = "pending";
+      thisEvent = new Event("startDisplay");
+      document.dispatchEvent(thisEvent);
+    } else if (e.target === addingProduct) {
 
-      else if (e.target.classList.contains("editButton")) {
-        editProduct.dataset.id = e.target.dataset.id;
+      if (!editProduct.dataset.id) {
+        // this is an attempted add
         suspendInput = true;
         try {
-          const response = await fetch(`/api/v1/products/${e.target.dataset.id}`, {
-            method: "GET",
+          const response = await fetch("/api/v1/products", {
+            method: "POST",
             headers: {
               "Content-Type": "application/json",
               Authorization: `Bearer ${token}`,
             },
+            body: JSON.stringify({
+              company: company.value,
+              position: position.value,
+              status: status.value,
+            }),
+          });
+          const data = await response.json();
+          if (response.status === 201) {
+            //successful create
+            message.textContent = "The product entry was created.";
+            showing.style.display = "none";
+            thisEvent = new Event("startDisplay");
+            document.dispatchEvent(thisEvent);
+            company.value = "";
+            position.value = "";
+            status.value = "pending";
+          } else {
+            // failure
+            message.textContent = data.msg;
+          }
+        } catch (err) {
+          message.textContent = "A communication error occurred.";
+        }
+        suspendInput = false;
+      } else {
+        // this is an update
+        suspendInput = true;
+        try {
+          const productID = editProduct.dataset.id;
+          const response = await fetch(`/api/v1/products/${productID}`, {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${token}`,
+            },
+            body: JSON.stringify({
+              company: company.value,
+              position: position.value,
+              status: status.value,
+            }),
           });
           const data = await response.json();
           if (response.status === 200) {
-            company.value = data.product.company;
-            position.value = data.product.position;
-            status.value = data.product.status;
+            message.textContent = "The entry was updated.";
             showing.style.display = "none";
-            showing = editProduct;
-            showing.style.display = "block";
-            addingProduct.textContent = "update";
-            message.textContent = "";
-          } else {
-            // might happen if the list has been updated since last display
-            message.textContent = "The products entry was not found";
+            company.value = "";
+            position.value = "";
+            status.value = "pending";
             thisEvent = new Event("startDisplay");
             document.dispatchEvent(thisEvent);
+          } else {
+            message.textContent = data.msg;
           }
         } catch (err) {
-          message.textContent = "A communications error has occurred.";
+
+          message.textContent = "A communication error occurred.";
         }
-        suspendInput = false;
       }
-  
+      suspendInput = false;
+    } // section 5
+
+    else if (e.target.classList.contains("editButton")) {
+      editProduct.dataset.id = e.target.dataset.id;
+      suspendInput = true;
+      try {
+        const response = await fetch(`/api/v1/products/${e.target.dataset.id}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        });
+        const data = await response.json();
+        if (response.status === 200) {
+          company.value = data.product.company;
+          position.value = data.product.position;
+          status.value = data.product.status;
+          showing.style.display = "none";
+          showing = editProduct;
+          showing.style.display = "block";
+          addingProduct.textContent = "update";
+          message.textContent = "";
+        } else {
+          // might happen if the list has been updated since last display
+          message.textContent = "The products entry was not found";
+          thisEvent = new Event("startDisplay");
+          document.dispatchEvent(thisEvent);
+        }
+      } catch (err) {
+        message.textContent = "A communications error has occurred.";
+      }
+      suspendInput = false;
+    }
+
   })
-  });
+});
