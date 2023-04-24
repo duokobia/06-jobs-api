@@ -1,0 +1,180 @@
+[
+
+    {
+        "name": "Aconitum",
+        "category": "Flower",
+        "price": "250",
+        "description": "An African blossomy flower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Aconitum_degenii.jpg/128px-Aconitum_degenii.jpg"
+    },
+    {
+        "name": "African Daisy",
+        "category": "Flower",
+        "price": "250",
+        "description": "An African blossomy flower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/WhiteGazania.JPG/128px-WhiteGazania.JPG"
+
+    },
+    {
+        "name": "Agapanthus",
+        "category": "Flower",
+        "price": "250",
+        "description": "A star of Bethlehem flower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Agapanthus_Postbloom.jpg/256px-Agapanthus_Postbloom.jpg"
+    },
+    {
+        "name": "Alchemilla",
+        "category": "Flower",
+        "price": "250",
+        "description": "Lady's mantle flower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/de/Alchemilla_alpina0.jpg"
+
+    },
+    {
+        "name": "Allium roseum",
+        "category": "Flower",
+        "price": "250",
+        "description": "A garlic like flower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Allium_roseum%2C_Pisa.JPG/128px-Allium_roseum%2C_Pisa.JPG"
+    },
+    {
+        "name": "Alstroemeria",
+        "category": "Flower",
+        "price": "250",
+        "description": "A peruvian lily from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Alstroemeria_aurea_%27Saturne%27.jpg/128px-Alstroemeria_aurea_%27Saturne%27.jpg"
+
+    },
+    {
+        "name": "Alyssum",
+        "category": "Flower",
+        "price": "250",
+        "description": "A sweet Alyssum flower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Iceland_Plants_4911.JPG/128px-Iceland_Plants_4911.JPG"
+    },
+    {
+        "name": "Amaranthus",
+        "category": "Flower",
+        "price": "250",
+        "description": "It is a prince's feather flower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/WhiteGazania.JPG/128px-WhiteGazania.JPG"
+
+    },
+    {
+        "name": "Amaryllis",
+        "category": "Flower",
+        "price": "250",
+        "description": "A hippeastrum flower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Aconitum_degenii.jpg/128px-Aconitum_degenii.jpg"
+    },
+    {
+        "name": "Anemone",
+        "category": "Flower",
+        "price": "250",
+        "description": "A windflower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Wood_anemone_flowers.jpg/128px-Wood_anemone_flowers.jpg"
+
+    },
+    {
+        "name": "Angelonia",
+        "category": "Flower",
+        "price": "250",
+        "description": "A summer snapdragon flower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Angelonia_salicariifolia_06.jpg/128px-Angelonia_salicariifolia_06.jpg"
+    },
+    {
+        "name": "Anthurium",
+        "category": "Flower",
+        "price": "250",
+        "description": "A flamingo flower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Anthurium1.JPG/128px-Anthurium1.JPG"
+
+    },
+    {
+        "name": "Antirrhinum majus",
+        "category": "Flower",
+        "price": "250",
+        "description": "A snapdragon flower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/File-Snapdragons.JPG/128px-File-Snapdragons.JPG"
+    },
+
+
+
+
+
+    
+    {
+        "name": "Alstroemeria",
+        "category": "Flower",
+        "price": "250",
+        "description": "A peruvian lily from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Alstroemeria_aurea_%27Saturne%27.jpg/128px-Alstroemeria_aurea_%27Saturne%27.jpg"
+
+    },
+    {
+        "name": "Alyssum",
+        "category": "Flower",
+        "price": "250",
+        "description": "A sweet Alyssum flower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Iceland_Plants_4911.JPG/128px-Iceland_Plants_4911.JPG"
+    },
+    {
+        "name": "Amaranthus",
+        "category": "Flower",
+        "price": "250",
+        "description": "It is a prince's feather flower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1a/WhiteGazania.JPG/128px-WhiteGazania.JPG"
+
+    },
+    {
+        "name": "Amaryllis",
+        "category": "Flower",
+        "price": "250",
+        "description": "A hippeastrum flower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Aconitum_degenii.jpg/128px-Aconitum_degenii.jpg"
+    },
+    {
+        "name": "Anemone",
+        "category": "Flower",
+        "price": "250",
+        "description": "A windflower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Wood_anemone_flowers.jpg/128px-Wood_anemone_flowers.jpg"
+
+    },
+    {
+        "name": "Angelonia",
+        "category": "Flower",
+        "price": "250",
+        "description": "A summer snapdragon flower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Angelonia_salicariifolia_06.jpg/128px-Angelonia_salicariifolia_06.jpg"
+    },
+    {
+        "name": "Anthurium",
+        "category": "Flower",
+        "price": "250",
+        "description": "A flamingo flower from a city garden",
+        "quantity": "10",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Anthurium1.JPG/128px-Anthurium1.JPG"
+
+    },
+    {"source": "https://www.all-my-favourite-flower-names.com/list-of-flower-names.html"}
+]

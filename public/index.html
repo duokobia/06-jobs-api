@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Fruits and Flowers</title>
+</head>
+
+<body>
+    <header >
+        <div class="upper-navbar">
+            <p class="upper-navbar-info">Get a discount of 20% on purchase over $100.</p>
+            <button type="button" id="logoff" class="logoff-button" style="display:none;">logoff</button>
+        </div>
+        <div class="lower-navbar">
+            <h1 class="main-logo">
+               
+                <span class="main-logo-fruits">Fruits</span>
+                <span class="main-logo-and">&</span>
+                <span class="main-logo-flowers">Flowers</span>
+            </h1>
+            <span>
+                <p class="lower-navbar-advert">A scrolling advert of the newest stocks is advertised here.</p>
+            </span>
+            <ul class="lower-navbar-list">
+                <li class="lower-navbar-list-item">Home</li>
+                <li class="lower-navbar-list-item">Products</li>
+                <li class="lower-navbar-list-item">Orders</li>
+                <li class="lower-navbar-list-item-cart">
+                    <!-- Cart -->
+                    <i class="fa fa-shopping-cart" style="font-size:30px;color:#FF58A6">
+                        <span class="shopping-cart-count">2</span>
+                    </i>
+                </li>
+            </ul>
+            <div></div>
+        </div>
+    </header>
+    <!-- TODO
+    MAKE A LOGIC TO ALLOW THE UPPERNAVBAR SHOW LOGIN AND REGISTER WHEN NOT LOGGED IN.  -->
+    <main>
+        <div class="hero-container">
+            <div class="hero-image">
+                <p class="hero-caption">Beautiful flowers and fresh fruits</p>
+                <p>from well cultured gardens and organic farms.</p>
+                <p>Image carousel goes here</p>
+            </div>
+        </div>
+       
+        <div class="form-container">
+            <h1 class="form-container-heading">Login to your account</h1>
+            <div class="auth-inner">
+                <!-- https://unsplash.com/s/photos/flower-garden -->
+                <!-- https://unsplash.com/photos/ytsYMo1ciWo -->
+                
+                <p id="message" class="form-message"></p>
+              
+                <div id="logon-register" style="display:none;">
+                    <button type="button" id="logon">logon</button>
+                    <button type="button" id="register">register</button>
+                </div>
+                <div id="logon-div" style="display:none;">
+                    <form>
+                        <div class="form-input-div form-input-first-line">
+                            <label for="email">email:</label>
+                            <input type="email" id="email" class="form-input-control">
+                        </div>
+                        <div class="form-input-div">
+                            <label for="password">password:</label>
+                            <input type="password" id="password" class="form-input-control">
+                        </div>
+                        <div class="form-button-div">
+                            <button type="button" id="logon-button">logon</button>
+                            <button type="button" id="logon-cancel">cancel</button>
+                        </div>
+                    </form>
+                </div>
+                <div id="register-div" style="display:none;">
+                    <form>
+                        <div class="form-input-div form-input-first-line">
+                            <label for="name">name:</label>
+                            <input type="text" id="name" class="form-input-control">
+                        </div>
+                        <div class="form-input-div">
+                            <label for="email1">email:</label>
+                            <input type="email" id="email1" class="form-input-control">
+                        </div>
+                        <div class="form-input-div">
+                            <label for="password1">password:</label>
+                            <input type="password" id="password1" class="form-input-control">
+                        </div>
+                        <div class="form-input-div">
+                            <label for="password2">verify password:</label>
+                            <input type="password" id="password2" class="form-input-control">
+                        </div>
+                        <div class="form-button-div">
+                            <button type="button" id="register-button">register</button>
+                            <button type="button" id="register-cancel">cancel</button>    
+                        </div>
+                    </form>
+                </div>
+                <div id="products" style="display:none;">
+                    <p id="products-message"></p>
+                    <table id="products-table" style="display:none;">
+                        <tr id="products-table-header">
+                            <th>Name</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th colspan="2"></th>
+                        </tr>
+                    </table>
+                    <button type="button" id="add-product">add a product</button>
+                </div>
+                <div id="edit-product" style="display:none;">
+                    <form>
+                        <div>
+                            <label for="company">name:</label>
+                            <input type="text" id="company" class="form-input-control">
+                        </div>
+                        <div>
+                            <label for="position">category:</label>
+                            <input type="text" id="position" class="form-input-control">
+                        </div>
+                        <div>
+                            <label for="status">price:</label>
+                            <select id="status">
+                                <option value="pending">pending</option>
+                                <option value="interview">interview</option>
+                                <option value="declined">declined</option>
+                            </select>
+                        </div>
+                        <button type="button" id="adding-product">add</button>
+                        <button type="button" id="edit-cancel">cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+       
+        
+    </main>
+    <footer>
+        <div class="footer-info">
+            <h3>Fruits&Flowers</h3>
+            <ul>
+                <li><a>About</a></li>
+                <li><a>Contact Us</a></li>
+                <li><a>Careers</a></li>
+            </ul>
+            <ul>
+                <li><a>News</a></li>
+                <li><a>Connect With Us</a></li>
+                <li><a>Social</a></li>
+            </ul>
+        </div>
+        
+        <p class="footer-copyright">Copyright Fruits&Flowers @2023 </p>
+    </footer>
+    <script src="./products.js"></script>
+</body>
+</html>

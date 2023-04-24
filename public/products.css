@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body{
+    background: #D3F588 center/cover url("https://www.shutterstock.com/image-photo/apple-tree-green-260nw-20227228.jpg") no-repeat;
+    min-height: 100vh;
+    width: 100%;
+    font-weight: 400;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,label,span {
+    font-weight: 500;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+/* TO-DO MAKE ALL UNITS REM */
+/* Change font to see how beautiful App looks */
+/* Add scrolling parallax effect background images to the landing page */
+/* Resize the login form to go to the RHS of the page. */
+/* Media querries of the app. */
+/* Deploy app to render.com */
+/* User Interface to create products. */
+
+/* Edit form input and align them properly */
+/* Delete App.css once I copy css selector parameters */
+/* Change units to rem */
+
+
+ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+li{
+    text-decoration: none;
+    list-style: none;
+    padding: 0 0.3125rem 0.3125rem;
+    cursor: pointer;
+}
+
+button{
+    margin: 0.125rem 0.3125rem;
+    padding: 0.5rem 1.125rem;
+    border: 0;
+    border-radius: 1.45rem;
+    font-size: 1rem;
+    font-weight: 400;
+    background: #015500;
+    color: white;
+}
+
+button:hover{
+    cursor: pointer;
+    background: #015500;
+    opacity: 0.95;
+    color: rgb(243, 238, 238);
+}
+
+/* header section */
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+.upper-navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 0.9375rem 0.3125rem;
+    background-color: rgb(43, 41, 41);
+    color: white;
+    height: 3.125rem;
+}
+
+.upper-navbar-info{
+    padding-right: 2.1875rem;
+}
+
+.logoff-button{
+    margin-right: 1.5625rem;
+}
+
+.lower-navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 0 0.9375rem;
+    background-color: #F6FDE7;
+    color: #034100;
+    height: 4.375rem;
+}
+
+.main-logo{
+    padding: 0 0 0 2.5rem;
+}
+
+.main-logo-fruits{
+    padding: 0;
+}
+
+.main-logo-and{
+    color: #85aa37;
+    margin: -0.5rem;
+}
+
+.main-logo-flowers{
+    color: #FF58A6;
+    font-weight: normal;
+}
+
+.lower-navbar-advert{
+    border: 1px solid #015500;
+    border-radius: 0.3125rem;
+    padding: 0.3125rem 0.5rem;
+    color: #e9692c;
+}
+
+.lower-navbar-list{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.lower-navbar-list-item{
+    padding: 0 0.9375rem 0;
+    cursor: pointer;
+}
+
+.lower-navbar-list-item-cart{
+    padding: 0 0.9375rem 0;
+    cursor: pointer;
+    margin-left: 15px;
+    position: relative;
+}
+
+.lower-navbar-list-item:hover{
+    border-bottom: 0.15625rem solid #FF58A6;
+    padding-bottom: 0.1875rem;
+}
+
+.lower-navbar-list-item-cart:hover{
+    border-bottom: 0.15625rem solid #015500;
+    padding-bottom: 0.1875rem;
+}
+
+.shopping-cart-count{
+    position: absolute;
+    background-color: #e92222;
+    color: white;
+    font-size: 11px;
+    border: 0.625px solid ;
+    border-radius: 50%;
+    padding: 4.5px;
+}
+
+/* main section */
+main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+}
+
+.hero-container {
+    flex: 3;
+    background: #D3F588 center/cover url("./images/flowerFruitBg.jpeg") no-repeat;
+    opacity: 0.754;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: transparent;
+    font-size: 40px;
+}
+
+.hero-caption{
+    color: white;
+    font-style: 40px; 
+}
+
+.form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.form-container-heading{
+    color: #272d16;
+    font-size: 30px;
+}
+
+.auth-inner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    min-height: 15.25rem;
+    transition: all .3s;
+}
+
+#logon-register{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-message{
+    padding: 1.25rem 0;
+    color: red;
+}
+
+.form-input-div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 1.9375rem;
+    font-size: 1.125rem;
+    color: #041403;
+}
+
+.form-input-div label{
+    font-weight: normal;
+    padding-right: 15px;
+    padding-bottom: 10px;
+}
+
+.form-button-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-input-first-line{
+    margin-top: 1.25rem;
+}
+
+.form-input-control {
+    width: 100%;
+    font-weight: 400;
+    font-size: 14px;
+    padding: 8px 8px;
+    border: .01px solid gray;
+    border-radius: 8px;
+}
+
+
+/* footer section */
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3.2rem 0 3.2rem;
+    background: #191D0E;
+    color: white;
+    height: 8.25rem;
+    padding-bottom: 1.5rem;
+}
+
+.footer-info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.2rem;
+}
+
+.footer-copyright{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    padding-top: 0.85rem;
+}
+
+/* Queries */
+@media only screen and (max-width: 768px) {
+   
+    .hero-container {
+        flex: 2;
+    }
+
+    .form-container {
+        flex: 2;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+   
+    main{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    .hero-container {
+        min-height: 30vh;
+    }
+
+    .form-container {
+        margin: 30% auto;
+    }
+}
